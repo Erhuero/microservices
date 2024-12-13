@@ -7,6 +7,10 @@
   <artifactId>realmservices</artifactId>
   <version>1.0-SNAPSHOT</version>
 
+  <modules>
+    <module>cartes</module>
+  </modules>
+
   <name>realmservices</name>
   <!-- FIXME change it to the project's website -->
   <url>https://www.lysero.com</url>
