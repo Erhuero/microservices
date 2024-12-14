@@ -9,10 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequestMapping("api/v1/deck")
-public record DeckController() {
+public record DeckController(DeckService deckService) {
 
     @PostMapping
     public void registerDeck(@RequestBody DeckRegistrationRequest deckRegistrationRequest) {
         log.info("new customer regestration {}", deckRegistrationRequest);
+    deckService.registerDeck(deckRegistrationRequest);
     }
 }
