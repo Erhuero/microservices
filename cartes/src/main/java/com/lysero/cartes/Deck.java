@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.GenericGenerator;
 
 import java.util.List;
 import java.util.UUID;
@@ -17,14 +18,9 @@ import java.util.UUID;
 public class Deck {
 
     @Id
-    @SequenceGenerator(
-            name = "deck_id_sequence",
-            sequenceName = "deck_id_sequence"
-    )
-    @GeneratedValue(
-            strategy = GenerationType.AUTO,
-            generator = "deck_id_sequence"
-    )
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    @Column(updatable = false, nullable = false)
     private UUID deckId;
     private UUID playerId;
     private String name;

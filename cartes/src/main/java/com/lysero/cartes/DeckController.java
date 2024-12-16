@@ -13,7 +13,7 @@ public record DeckController(DeckService deckService) {
 
     @PostMapping
     public void registerDeck(@RequestBody DeckRegistrationRequest deckRegistrationRequest) {
-        log.info("new customer regestration {}", deckRegistrationRequest);
+        log.info("new deck registration {}", deckRegistrationRequest);
     deckService.registerDeck(deckRegistrationRequest);
     }
 }
