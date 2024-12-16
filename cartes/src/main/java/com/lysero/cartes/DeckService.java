@@ -3,7 +3,7 @@ package com.lysero.cartes;
 import org.springframework.stereotype.Service;
 
 @Service
-public record DeckService() {
+public record DeckService(DeckRepository deckRepository) {
 
     public void registerDeck(DeckRegistrationRequest request) {
         Deck deck = Deck.builder()
@@ -12,6 +12,6 @@ public record DeckService() {
                 .cardIdList(request.cardIdList())
                 .build();
 
-
+        deckRepository.save(deck);
     }
 }
