@@ -2,5 +2,26 @@ server:
   port: 8081
 
 spring:
-  application:
-    name: fraud
+    application:
+      name: fraud
+    datasource:
+      url: jdbc:postgresql://localhost:5432/fraud
+      username: lysero
+      password: password
+
+      jpa:
+        hibernate:
+          ddl-auto: update
+        show-sql: true # Affiche les requêtes SQL dans les logs
+        properties:
+          hibernate:
+            dialect: org.hibernate.dialect.PostgreSQLDialect
+            format_sql: true # Affiche les requêtes SQL de manière formatée dans les logs
+
+    logging:
+      level:
+        root: INFO # Niveau de log global
+        org.hibernate.SQL: DEBUG # Affiche les requêtes SQL générées
+        org.hibernate.type.descriptor.sql: TRACE # Affiche les valeurs des paramètres SQL
+        org.springframework: INFO # Logs Spring
+        com.lysero.fraud: DEBUG # Logs spécifiques à votre application
