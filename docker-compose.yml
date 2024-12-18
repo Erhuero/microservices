@@ -13,6 +13,7 @@ services:
     networks:
       - postgres
     restart: unless-stopped
+
   postgres-fraud:
     container_name: postgres-realmservices
     image: postgres
