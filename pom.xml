@@ -10,6 +10,7 @@
 
   <modules>
     <module>cartes</module>
+    <module>fraud</module>
   </modules>
 
   <name>realmservices</name>
