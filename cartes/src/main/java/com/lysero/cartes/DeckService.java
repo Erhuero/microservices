@@ -1,9 +1,13 @@
 package com.lysero.cartes;
 
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
-public record DeckService(DeckRepository deckRepository) {
+@AllArgsConstructor
+public class DeckService {
+
+    private final DeckRepository deckRepository;
 
     public void registerDeck(DeckRegistrationRequest request) {
         Deck deck = Deck.builder()

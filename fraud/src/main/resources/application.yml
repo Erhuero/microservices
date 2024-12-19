@@ -2,22 +2,22 @@ server:
   port: 8081
 
 spring:
-  application:
-    name: fraud
+    application:
+        name: fraud
 
-  datasource:
-    url: jdbc:postgresql://localhost:5432/fraud
-    username: lysero
-    password: password
+    datasource:
+      url: jdbc:postgresql://localhost:5432/fraud
+      username: lysero
+      password: password
 
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true # Affiche les requêtes SQL dans les logs
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-        format_sql: true # Affiche les requêtes SQL de manière formatée dans les logs
+    jpa:
+        hibernate:
+          ddl-auto: update
+        show-sql: true # Affiche les requêtes SQL dans les logs
+        properties:
+          hibernate:
+            dialect: org.hibernate.dialect.PostgreSQLDialect
+            format_sql: true # Affiche les requêtes SQL de manière formatée dans les logs
 
 logging:
   level:
