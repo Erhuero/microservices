@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Service
 @AllArgsConstructor
@@ -11,10 +12,10 @@ public class FraudCheckService {
 
     private final FraudCheckHistoryRepository fraudCheckHistoryRepository;
 
-    public boolean isFraudulentCustomer(Integer customerId){
+    public boolean isFraudulentCustomer(UUID playerId){
         fraudCheckHistoryRepository.save(
                 FraudCheckHistory.builder()
-                        .customerId(customerId)
+                        .playerId(playerId)
                         .createdAt(LocalDateTime.now())
                         .isFraudster(false)
                         .build()

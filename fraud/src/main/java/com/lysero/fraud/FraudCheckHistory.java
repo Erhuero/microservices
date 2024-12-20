@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Data
 @Builder
@@ -24,7 +25,7 @@ public class FraudCheckHistory {
             generator = "fraud_id_sequence"
     )
     private Integer id;
-    private Integer customerId;
+    private UUID playerId;
     private Boolean isFraudster;
     private LocalDateTime createdAt;
 }
