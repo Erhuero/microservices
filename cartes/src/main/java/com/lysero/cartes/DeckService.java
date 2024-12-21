@@ -1,6 +1,5 @@
 package com.lysero.cartes;
 
-import com.lysero.clients.fraud.FraudCheckResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;

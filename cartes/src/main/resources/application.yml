@@ -13,16 +13,23 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true # Affiche les requêtes SQL dans les logs
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-        format_sql: true # Affiche les requêtes SQL de manière formatée dans les logs
+        format_sql: true # Affiche les requetes SQL de maniï¿½re formatï¿½e dans les logs
+    show-sql: true # Affiche les requetes SQL dans les logs
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
 
 logging:
   level:
     root: INFO # Niveau de log global
-    org.hibernate.SQL: DEBUG # Affiche les requêtes SQL générées
-    org.hibernate.type.descriptor.sql: TRACE # Affiche les valeurs des paramètres SQL
+    org.hibernate.SQL: DEBUG # Affiche les requetes SQL
+    org.hibernate.type.descriptor.sql: TRACE # Affiche les valeurs des paramï¿½tres SQL
     org.springframework: INFO # Logs Spring
-    com.lysero.cartes: DEBUG # Logs spécifiques à votre application
+    com.lysero.cartes: DEBUG
+
+

@@ -21,9 +21,9 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="cartes" options="-parameters" />
+      <module name="cartes" options="" />
       <module name="eureka-server" options="" />
-      <module name="fraud" options="-parameters" />
+      <module name="fraud" options="" />
       <module name="test" options="-parameters" />
     </option>
   </component>
