@@ -11,6 +11,7 @@
         <module name="test" />
         <module name="eureka-server" />
         <module name="fraud" />
+        <module name="joueurs" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,6 +25,7 @@
       <module name="cartes" options="" />
       <module name="eureka-server" options="" />
       <module name="fraud" options="" />
+      <module name="joueurs" options="-parameters" />
       <module name="test" options="-parameters" />
     </option>
   </component>
