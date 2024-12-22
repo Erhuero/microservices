@@ -19,7 +19,7 @@ public class FraudController {
             @PathVariable("playerId") UUID playerId) {
         boolean isFraudulentCustomer = fraudCheckService.
                 isFraudulentCustomer(playerId);
-        log.info("fraud check request for customer {}", playerId);
+        log.info("fraud check request for deck {}", playerId);
 
         return new FraudCheckResponse(isFraudulentCustomer);
     }
