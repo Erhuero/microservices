@@ -21,7 +21,7 @@ public class DeckService {
         deckRepository.saveAndFlush(deck);
 
         FraudCheckResponse fraudCheckResponse = restTemplate.getForObject(
-                "http://localhost:8081/api/v1/fraud-check/{deckId}",
+                "http://FRAUD/api/v1/fraud-check/{deckId}",
                 FraudCheckResponse.class,
                 deck.getDeckId()
         );
