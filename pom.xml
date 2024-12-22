@@ -11,6 +11,7 @@
   <modules>
     <module>cartes</module>
     <module>fraud</module>
+    <module>joueurs</module>
     <module>eureka-server</module>
   </modules>
 
@@ -54,6 +55,12 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-openfeign</artifactId>
+      <version>3.0.3</version>
     </dependency>
   </dependencies>
 
