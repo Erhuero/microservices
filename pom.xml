@@ -11,7 +11,7 @@
   <modules>
     <module>cartes</module>
     <module>fraud</module>
-    <module>joueurs</module>
+    <module>clients</module>
     <module>eureka-server</module>
   </modules>
 

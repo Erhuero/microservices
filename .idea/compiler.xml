@@ -8,10 +8,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cartes" />
+        <module name="clients" />
         <module name="test" />
         <module name="eureka-server" />
         <module name="fraud" />
-        <module name="joueurs" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,9 +23,9 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cartes" options="" />
+      <module name="clients" options="" />
       <module name="eureka-server" options="" />
       <module name="fraud" options="" />
-      <module name="joueurs" options="" />
       <module name="test" options="-parameters" />
     </option>
   </component>

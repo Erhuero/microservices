@@ -1,10 +1,10 @@
-package com.lysero.joueurs;
+package com.lysero.clients;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JoueursApplicationTests {
+class ClientsApplicationTests {
 
     @Test
     void contextLoads() {

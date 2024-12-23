@@ -12,10 +12,12 @@
         <option value="$PROJECT_DIR$/test/pom.xml" />
         <option value="$PROJECT_DIR$/fraud/pom.xml" />
         <option value="$PROJECT_DIR$/joueurs/pom.xml" />
+        <option value="$PROJECT_DIR$/clients/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/joueurs/pom.xml" />
         <option value="$PROJECT_DIR$/test/pom.xml" />
       </set>
     </option>

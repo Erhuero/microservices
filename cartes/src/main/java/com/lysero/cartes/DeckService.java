@@ -1,15 +1,16 @@
 package com.lysero.cartes;
 
+import com.lysero.clients.fraud.FraudCheckResponse;
+import com.lysero.clients.fraud.FraudClient;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 @Service
 @AllArgsConstructor
 public class DeckService {
 
     private final DeckRepository deckRepository;
-    private final RestTemplate restTemplate;
+    private final FraudClient fraudClient;
 
     public void registerDeck(DeckRegistrationRequest request) {
         Deck deck = Deck.builder()
@@ -20,11 +21,8 @@ public class DeckService {
 
         deckRepository.saveAndFlush(deck);
 
-        FraudCheckResponse fraudCheckResponse = restTemplate.getForObject(
-                "http://FRAUD/api/v1/fraud-check/{deckId}",
-                FraudCheckResponse.class,
-                deck.getDeckId()
-        );
+        FraudCheckResponse fraudCheckResponse
+                = fraudClient.isFraudster(deck.getDeckId());
 
         if(fraudCheckResponse.isFraudster()){
             throw new IllegalStateException("fraudster");
