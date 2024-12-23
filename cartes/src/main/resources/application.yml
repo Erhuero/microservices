@@ -33,5 +33,7 @@ logging:
     org.hibernate.type.descriptor.sql: TRACE # Affiche les valeurs des param�tres SQL
     org.springframework: INFO # Logs Spring
     com.lysero.cartes: DEBUG
+    com.netflix.discovery: DEBUG
+    org.springframework.cloud.openfeign: DEBUG
 
 

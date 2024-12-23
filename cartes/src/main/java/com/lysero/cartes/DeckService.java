@@ -21,12 +21,13 @@ public class DeckService {
 
         deckRepository.saveAndFlush(deck);
 
-        FraudCheckResponse fraudCheckResponse
-                = fraudClient.isFraudster(deck.getDeckId());
+        FraudCheckResponse fraudCheckResponse =
+                fraudClient.isFraudster(deck.getDeckId());
+
+        System.out.println("Response from FraudClient: " + fraudCheckResponse.isFraudster());
 
         if(fraudCheckResponse.isFraudster()){
             throw new IllegalStateException("fraudster");
         }
-        deckRepository.save(deck);
     }
 }
