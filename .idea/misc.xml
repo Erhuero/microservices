@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/fraud/pom.xml" />
         <option value="$PROJECT_DIR$/joueurs/pom.xml" />
         <option value="$PROJECT_DIR$/clients/pom.xml" />
+        <option value="$PROJECT_DIR$/notification/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

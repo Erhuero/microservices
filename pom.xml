@@ -13,6 +13,8 @@
     <module>fraud</module>
     <module>clients</module>
     <module>eureka-server</module>
+    <module>notification</module>
+
   </modules>
 
   <name>realmservices</name>

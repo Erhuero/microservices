@@ -8,9 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication(scanBasePackages = "com.lysero.cartes")
 @EnableEurekaClient
-@EnableFeignClients(
-        basePackages = "com.lysero.clients"
-)
+@EnableFeignClients(basePackages = {"com.lysero.clients", "notification"})
 @EntityScan(basePackages = "com.lysero.cartes")
 public class CartesApplication {
 
