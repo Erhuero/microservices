@@ -16,8 +16,10 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-        format_sql: true # Affiche les requetes SQL de mani�re format�e dans les logs
-    show-sql: true # Affiche les requetes SQL dans les logs
+        format_sql: true
+    show-sql: true
+  zipkin:
+    base-url: http://localhost:9411
 
 eureka:
   client:
