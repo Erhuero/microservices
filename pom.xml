@@ -14,7 +14,7 @@
     <module>clients</module>
     <module>eureka-server</module>
     <module>notification</module>
-
+    <module>apigw</module>
   </modules>
 
   <name>realmservices</name>

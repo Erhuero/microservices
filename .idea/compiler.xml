@@ -8,11 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="notification" />
+        <module name="apigw" />
         <module name="cartes" />
         <module name="clients" />
         <module name="test" />
-        <module name="eureka-server" />
         <module name="fraud" />
+        <module name="eureka-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,6 +24,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="apigw" options="" />
       <module name="cartes" options="" />
       <module name="clients" options="" />
       <module name="eureka-server" options="" />
