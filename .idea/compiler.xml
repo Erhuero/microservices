@@ -13,6 +13,7 @@
         <module name="clients" />
         <module name="test" />
         <module name="fraud" />
+        <module name="amqp" />
         <module name="eureka-server" />
       </profile>
     </annotationProcessing>
@@ -24,6 +25,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="amqp" options="" />
       <module name="apigw" options="" />
       <module name="cartes" options="" />
       <module name="clients" options="" />
