@@ -6,7 +6,11 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@SpringBootApplication(scanBasePackages = "com.lysero.cartes")
+@SpringBootApplication(
+        scanBasePackages = {
+                "com.lysero.cartes",
+                "com.lysero.amqp"
+        })
 @EnableEurekaClient
 @EnableFeignClients(basePackages = {"com.lysero.clients", "notification"})
 @EntityScan(basePackages = "com.lysero.cartes")
