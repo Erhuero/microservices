@@ -1,4 +1,4 @@
-package notification;
+package com.lysero.clients.notification;
 
 public record NotificationRequest(
         java.util.UUID toPlayerId,

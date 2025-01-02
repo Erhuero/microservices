@@ -3,7 +3,7 @@ package com.lysero.notification.rabbitmq;
 import com.lysero.notification.NotificationService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import notification.NotificationRequest;
+import com.lysero.clients.notification.NotificationRequest;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 

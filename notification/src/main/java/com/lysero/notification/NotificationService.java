@@ -1,7 +1,7 @@
 package com.lysero.notification;
 
 import lombok.AllArgsConstructor;
-import notification.NotificationRequest;
+import com.lysero.clients.notification.NotificationRequest;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
