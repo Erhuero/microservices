@@ -7,14 +7,9 @@
         <artifactId>realmservices</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
     <artifactId>clients</artifactId>
+    <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>clients</name>
     <description>clients</description>
-    <url/>
-    <properties>
-        <java.version>17</java.version>
-    </properties>
 
 </project>

@@ -3,8 +3,8 @@ package com.lysero.cartes;
 import com.lysero.amqp.RabbitMQMessageProducer;
 import com.lysero.clients.fraud.FraudCheckResponse;
 import com.lysero.clients.fraud.FraudClient;
-import lombok.AllArgsConstructor;
 import com.lysero.clients.notification.NotificationRequest;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service

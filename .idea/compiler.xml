@@ -7,13 +7,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="notification" />
+        <module name="test" />
+      </profile>
+      <profile name="Annotation profile for realmservices" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
+        </processorPath>
         <module name="apigw" />
+        <module name="notification" />
         <module name="cartes" />
         <module name="clients" />
-        <module name="test" />
-        <module name="fraud" />
         <module name="amqp" />
+        <module name="fraud" />
         <module name="eureka-server" />
       </profile>
     </annotationProcessing>

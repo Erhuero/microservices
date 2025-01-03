@@ -12,7 +12,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
                 "com.lysero.amqp"
         })
 @EnableEurekaClient
-@EnableFeignClients(basePackages = {"com.lysero.clients", "notification"})
+@EnableFeignClients(basePackages = {"com.lysero.clients"})
 @EntityScan(basePackages = "com.lysero.cartes")
 public class CartesApplication {
 

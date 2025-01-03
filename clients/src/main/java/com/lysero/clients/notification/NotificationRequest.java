@@ -1,7 +1,9 @@
 package com.lysero.clients.notification;
 
+import java.util.UUID;
+
 public record NotificationRequest(
-        java.util.UUID toPlayerId,
+        UUID toPlayerId,
         String toPlayerName,
         String message
 ) {
