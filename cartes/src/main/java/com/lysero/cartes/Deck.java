@@ -16,7 +16,6 @@ import java.util.UUID;
 @NoArgsConstructor
 @Entity
 public class Deck {
-
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
