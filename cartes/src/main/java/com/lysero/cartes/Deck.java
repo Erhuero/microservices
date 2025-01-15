@@ -16,6 +16,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Entity
 public class Deck {
+
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
@@ -23,6 +24,7 @@ public class Deck {
     private UUID deckId;
     private UUID playerId;
     private String name;
+
     @ElementCollection
     @CollectionTable(name = "deck_card_ids", joinColumns = @JoinColumn(name = "deck_id"))
     @Column(name = "card_id")
