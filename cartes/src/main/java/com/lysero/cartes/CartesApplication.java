@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 
 @SpringBootApplication(
         scanBasePackages = {
@@ -13,6 +15,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
         })
 @EnableEurekaClient
 @EnableFeignClients(basePackages = {"com.lysero.clients"})
+@PropertySources({
+        @PropertySource("classpath:clients-${spring.profiles.active}.properties")
+})
 @EntityScan(basePackages = "com.lysero.cartes")
 public class CartesApplication {
 
