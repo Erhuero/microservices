@@ -1,0 +1,44 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: cartes
+
+  datasource:
+    url: jdbc:postgresql://postgres:5432/cartes
+    username: lysero
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+  zipkin:
+    base-url: http://zipkin:9411
+  rabbitmq:
+    addresses: rabbitmq:5672
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+    enabled: false
+
+logging:
+  level:
+    root: INFO # Niveau de log global
+    org.hibernate.SQL: DEBUG # Affiche les requetes SQL
+    org.hibernate.type.descriptor.sql: TRACE # Affiche les valeurs des param�tres SQL
+    org.springframework: INFO # Logs Spring
+    com.lysero.cartes: DEBUG
+    com.netflix.discovery: DEBUG
+    org.springframework.cloud.openfeign: DEBUG
+
+
