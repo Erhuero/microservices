@@ -24,5 +24,4 @@ public class CartesApplication {
     public static void main(String[] args) {
         SpringApplication.run(CartesApplication.class, args);
     }
-
 }
