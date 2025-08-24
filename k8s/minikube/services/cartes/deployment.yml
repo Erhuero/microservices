@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cartes
+  labels:
+    app: cartes
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cartes
+  template:
+    metadata:
+      name: cartes
+      labels:
+        app: cartes
+    spec:
+      containers:
+        - name: cartes
+          image: chtanx/cartes:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: kube
+      restartPolicy: Always
